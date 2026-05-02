@@ -28,8 +28,6 @@ border:1px solid #eee;
 background:#fafafa;
 }
 
-.block:hover{transform:translateY(-5px);transition:0.2s;}
-
 .product-logo{height:55px;margin-bottom:15px;}
 
 .btn{
@@ -89,86 +87,58 @@ font-weight:600;
 
 <div class="block">
 <img class="product-logo" src="assets/erdoor-logo.png">
+<h2>ERDOOR</h2>
 <p id="erdoor"></p>
 <a href="pdf/erdoor.pdf" class="btn" target="_blank" id="download1"></a>
 </div>
 
 <div class="block">
 <img class="product-logo" src="assets/decker-logo.png">
+<h2>DECKER</h2>
 <p id="decker"></p>
 <a href="pdf/decker.pdf" class="btn" target="_blank" id="download2"></a>
 </div>
 
 <div class="whatsapp">
 <h2 id="contactTitle"></h2>
-<a class="whatsapp-btn" target="_blank" href="https://wa.me/213560585761">
+<a class="whatsapp-btn" target="_blank" href="https://wa.me/213XXXXXXXXX">
 💬 <span id="waText"></span>
 </a>
+</div>
+
+<div style="margin-top:60px; padding:0 10%;">
+<iframe 
+src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3200.025708604621!2d3.2418133000000005!3d36.6738829!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x128e51003bac78f7%3A0x6ec936d9de2003fb!2sFixer%20Algeria!5e0!3m2!1str!2sdz!4v1777759392057!5m2!1str!2sdz"
+width="100%" height="400" style="border:0; border-radius:12px;"
+allowfullscreen="" loading="lazy">
+</iframe>
 </div>
 
 </div>
 
 <script>
-
 const texts = {
-fr:{
-title:"Merci de votre visite à Batimatec 2026",
-desc:"Accédez à nos catalogues et contactez-nous ci-dessous.",
-erdoor:"Systèmes de portes composites haut de gamme.",
-decker:"Solutions WPC extérieures.",
-download:"Télécharger le catalogue",
-whatsapp:"Contacter via WhatsApp",
-contact:"Nos représentants"
-},
-tr:{
-title:"Batimatec 2026 Fuarında Bizi Ziyaret Ettiğiniz İçin Teşekkür Ederiz",
-desc:"Kataloglarımıza ve iletişim bilgilerine aşağıdan ulaşabilirsiniz.",
-erdoor:"Yüksek kaliteli kapı sistemleri.",
-decker:"WPC deck çözümleri.",
-download:"Kataloğu İndir",
-whatsapp:"WhatsApp ile İletişim",
-contact:"Müşteri Temsilcilerimiz"
-},
-en:{
-title:"Thank You for Visiting",
-desc:"Access catalogs and contact us below.",
-erdoor:"High-quality door systems.",
-decker:"WPC deck solutions.",
-download:"Download Catalog",
-whatsapp:"Contact via WhatsApp",
-contact:"Our Representatives"
-},
-ar:{
-title:"شكراً لزيارتكم",
-desc:"يمكنكم تحميل الكتالوج والتواصل معنا أدناه.",
-erdoor:"أنظمة الأبواب.",
-decker:"حلول الديك.",
-download:"تحميل الكتالوج",
-whatsapp:"واتساب",
-contact:"الممثلون"
-}
+fr:{title:"Merci de votre visite à Batimatec 2026",desc:"Accédez à nos catalogues et contactez-nous ci-dessous.",erdoor:"Systèmes de portes composites haut de gamme.",decker:"Solutions WPC extérieures.",download:"Télécharger le catalogue",whatsapp:"Contacter via WhatsApp",contact:"Nos représentants"},
+tr:{title:"Batimatec 2026 Fuarında Bizi Ziyaret Ettiğiniz İçin Teşekkür Ederiz",desc:"Kataloglarımıza ve iletişim bilgilerine aşağıdan ulaşabilirsiniz.",erdoor:"Yüksek kaliteli kapı sistemleri.",decker:"WPC deck çözümleri.",download:"Kataloğu İndir",whatsapp:"WhatsApp ile İletişim",contact:"Müşteri Temsilcilerimiz"},
+en:{title:"Thank You for Visiting",desc:"Access catalogs and contact us below.",erdoor:"High-quality door systems.",decker:"WPC deck solutions.",download:"Download Catalog",whatsapp:"Contact via WhatsApp",contact:"Our Representatives"},
+ar:{title:"شكراً لزيارتكم",desc:"يمكنكم تحميل الكتالوج والتواصل معنا أدناه.",erdoor:"أنظمة الأبواب.",decker:"حلول الديك.",download:"تحميل الكتالوج",whatsapp:"واتساب",contact:"الممثلون"}
 };
 
 function setLang(lang){
 const t = texts[lang];
-
 document.documentElement.dir = (lang==="ar")?"rtl":"ltr";
-
 document.getElementById("title").innerText = t.title;
 document.getElementById("desc").innerText = t.desc;
 document.getElementById("erdoor").innerText = t.erdoor;
 document.getElementById("decker").innerText = t.decker;
-
 document.getElementById("download1").innerText = t.download;
 document.getElementById("download2").innerText = t.download;
-
 document.getElementById("contactTitle").innerText = t.contact;
 document.getElementById("waText").innerText = t.whatsapp;
 }
-
 setLang("fr");
-
 </script>
 
 </body>
 </html>
+
